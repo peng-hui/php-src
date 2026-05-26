@@ -78,6 +78,7 @@ int __riscosify_control = __RISCOSIFY_STRICT_UNIX_SPECS;
 #include "zend_compile.h"
 #include "zend_execute.h"
 #include "zend_highlight.h"
+#include "zend_witcher_trace.h"
 
 #include "php_getopt.h"
 
@@ -1759,6 +1760,8 @@ int main(int argc, char *argv[])
 	ZEND_TSRMLS_CACHE_UPDATE();
 # endif
 #endif
+
+	witcher_cgi_trace_init("__AFL_SHM_ID");
 
 	zend_signal_startup();
 

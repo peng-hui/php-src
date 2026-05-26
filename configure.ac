@@ -1788,6 +1788,7 @@ PHP_ADD_SOURCES([Zend], m4_normalize([
     zend_virtual_cwd.c
     zend_vm_opcodes.c
     zend_weakrefs.c
+    zend_witcher_trace.c
     zend.c
   ]),
   [-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 $fiber_asm_cflag])
